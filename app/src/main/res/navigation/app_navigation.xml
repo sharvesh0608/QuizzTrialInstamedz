@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/welcome">
+
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.quizztrialinstamedz.Welcome"
+        android:label="Welcome" >
+        <action
+            android:id="@+id/action_welcome_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.quizztrialinstamedz.QuestionFragment"
+        android:label="QuestionFragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_fragZeroToFourty"
+            app:destination="@id/fragZeroToFourty" />
+        <action
+            android:id="@+id/action_questionFragment_to_fragAboveForty"
+            app:destination="@id/fragAboveForty" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragZeroToFourty"
+        android:name="com.example.quizztrialinstamedz.FragZeroToFourty"
+        android:label="FragZeroToFourty" />
+    <fragment
+        android:id="@+id/fragAboveForty"
+        android:name="com.example.quizztrialinstamedz.FragAboveForty"
+        android:label="FragAboveForty" />
+</navigation>
